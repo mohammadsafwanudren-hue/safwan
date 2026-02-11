@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Safwan • Links</title>
 
-
+<!-- Boxicons -->
 <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
 <style>
@@ -14,7 +14,6 @@
   box-sizing:border-box;
   font-family:"Poppins",sans-serif;
 }
-
 
 body{
   height:100vh;
@@ -26,7 +25,7 @@ body{
   background-size:300% 300%;
   animation:bgShift 14s ease infinite;
   color:#fff;
-  overflow:hidden;       
+  overflow:hidden;
 }
 @keyframes bgShift{
   0%{background-position:0% 50%;}
@@ -34,7 +33,6 @@ body{
   100%{background-position:0% 50%;}
 }
 
-/* center glow */
 body::before{
   content:"";
   position:fixed; inset:0;
@@ -45,48 +43,40 @@ body::before{
   z-index:-2;
 }
 
-
-
-.bubble-container {
-  position: fixed;
-  inset: 0;
-  overflow: hidden;
+/* Bubbles */
+.bubble-container{
+  position:fixed;
+  inset:0;
+  overflow:hidden;
   pointer-events:none;
   z-index:-1;
 }
-
-.bubble {
-  position: absolute;
-  bottom: -120px;
-  width: 20px;
-  height: 20px;
-  background: rgba(0,238,255,0.25);
-  border-radius: 50%;
-  animation: rise 12s linear infinite;
-  filter: blur(1px);
+.bubble{
+  position:absolute;
+  bottom:-120px;
+  width:20px; height:20px;
+  background:rgba(0,238,255,0.25);
+  border-radius:50%;
+  animation:rise 12s linear infinite;
+  filter:blur(1px);
 }
-
-@keyframes rise {
-  0% { transform: translateY(0) scale(1); opacity: .7; }
-  100% { transform: translateY(-120vh) scale(1.8); opacity: 0; }
+@keyframes rise{
+  0%{transform:translateY(0) scale(1); opacity:.7;}
+  100%{transform:translateY(-120vh) scale(1.8); opacity:0;}
 }
+.bubble:nth-child(odd){width:14px; height:14px;}
+.bubble:nth-child(3n){width:22px; height:22px;}
+.bubble:nth-child(1){left:5%; animation-delay:0s;}
+.bubble:nth-child(2){left:20%; animation-delay:2s;}
+.bubble:nth-child(3){left:35%; animation-delay:4s;}
+.bubble:nth-child(4){left:50%; animation-delay:1s;}
+.bubble:nth-child(5){left:65%; animation-delay:3s;}
+.bubble:nth-child(6){left:80%; animation-delay:5s;}
+.bubble:nth-child(7){left:90%; animation-delay:1.5s;}
 
-
-.bubble:nth-child(odd){ width:14px; height:14px; }
-.bubble:nth-child(3n){ width:22px; height:22px; }
-
-.bubble:nth-child(1){ left:5%; animation-delay:0s; }
-.bubble:nth-child(2){ left:20%; animation-delay:2s; }
-.bubble:nth-child(3){ left:35%; animation-delay:4s; }
-.bubble:nth-child(4){ left:50%; animation-delay:1s; }
-.bubble:nth-child(5){ left:65%; animation-delay:3s; }
-.bubble:nth-child(6){ left:80%; animation-delay:5s; }
-.bubble:nth-child(7){ left:90%; animation-delay:1.5s; }
-
-
+/* Card */
 .card{
-  width:100%;
-  max-width:420px;
+  width:100%; max-width:420px;
   background:rgba(255,255,255,0.06);
   padding:28px;
   border-radius:24px;
@@ -97,7 +87,7 @@ body::before{
   z-index:10;
 }
 
-
+/* Photo */
 .pic-wrap{
   width:150px; height:150px;
   margin:auto;
@@ -116,7 +106,7 @@ body::before{
   object-fit:cover;
 }
 
-
+/* Text */
 h1{
   margin-top:16px;
   font-size:28px;
@@ -127,7 +117,7 @@ h1{
   color:#bcd0dc;
 }
 
-
+/* Links */
 .links{
   margin-top:22px;
   display:flex;
@@ -157,67 +147,60 @@ h1{
   font-size:26px;
 }
 
-
+/* Icon colors */
 .ig i{color:#DD2A7B;}
 .wa i{color:#25D366;}
 .sc i{color:#FFFC00;}
 .em i{color:#EA4335;}
-.web i{color:#78bdff;}
 
 .footer{
   margin-top:15px;
   font-size:13px;
   color:#9fb0c0;
 }
-
 </style>
 </head>
 
 <body>
 
-
+<!-- Bubbles -->
 <div class="bubble-container">
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
-  <div class="bubble"></div>
+  <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
+  <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
   <div class="bubble"></div>
 </div>
 
 <div class="card">
 
   <div class="pic-wrap">
-    <img class="pic" 
-    src="imagesss.jpeg">
+    <img class="pic" src="imagesss.jpeg" alt="Profile Photo">
   </div>
 
   <h1>Mohamed Safwan</h1>
-  <div class="role">•Web Developer •Python developer</div>
+  <div class="role">• Web Developer  • Python Developer</div>
 
   <div class="links">
 
-    <a class="link ig" href="https://instagram.com/safw0_n7">
+    <a class="link ig" href="https://instagram.com/safw0_n7" target="_blank">
       <i class='bx bxl-instagram'></i> Instagram
     </a>
 
-    <a class="link wa" href="https://wa.me/918925397288">
+    <a class="link wa" href="https://wa.me/918925397288" target="_blank">
       <i class='bx bxl-whatsapp'></i> WhatsApp
     </a>
 
-    
-  <a class="link sc" href="https://www.snapchat.com/add/safwan_cr27?share_id=itjsA5zAQJubaVwahgMKFw&amp;locale=en_IN" target="_blank" rel="noopener">
-    <i class='bx bxl-snapchat'></i> Snapchat
-  </a>
-
-
-    <a class="link web" href="https://codesafwan.github.io/Portfolio/">
-      <i class='bx bx-link'></i> Portfolio Website
+    <a class="link sc" href="https://www.snapchat.com/add/safwan_cr27?share_id=itjsA5zAQJubaVwahgMKFw&amp;locale=en_IN" target="_blank">
+      <i class='bx bxl-snapchat'></i> Snapchat
     </a>
 
-  
-  </div  class="footer">© 2026 Safwan</div>
+
+    <a class="link em" href="mailto:mohammadsafwanudren@gmail.com">
+      <i class='bx bxl-gmail'></i> Email 
+    </a>
+
+  </div>
+
+  <div class="footer">© 2026 Safwan</div>
 
 </div>
 
